@@ -1,13 +1,13 @@
 package cache;
 
 import java.lang.ref.SoftReference;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /** Кэш на SoftReference: значения живут, пока хватает памяти. */
 public class SoftReferenceCache<K, V> implements Cache<K, V> {
 
-    private final Map<K, SoftReference<V>> entries = new HashMap<>();
+    private final Map<K, SoftReference<V>> entries = new ConcurrentHashMap<>();
 
     @Override
     public V get(K key) {

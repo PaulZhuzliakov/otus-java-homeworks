@@ -1,13 +1,13 @@
 package cache;
 
 import java.lang.ref.WeakReference;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /** Кэш на WeakReference: значение удаляется, как только на него нет сильных ссылок. */
 public class WeakReferenceCache<K, V> implements Cache<K, V> {
 
-    private final Map<K, WeakReference<V>> entries = new HashMap<>();
+    private final Map<K, WeakReference<V>> entries = new ConcurrentHashMap<>();
 
     @Override
     public V get(K key) {
