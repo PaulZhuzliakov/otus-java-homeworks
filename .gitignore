@@ -1,3 +1,7 @@
 target/
 .idea/
 *.iml
+
+# hw-01-java-agent: результаты запуска и сборки агента
+profiler-result.txt
+dependency-reduced-pom.xml

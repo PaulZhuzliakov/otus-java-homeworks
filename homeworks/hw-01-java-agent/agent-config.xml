@@ -1,0 +1,5 @@
+<profiler>
+    <duration>5</duration>
+    <method>demo.App.fastMethod</method>
+    <method>demo.App.slowMethod</method>
+</profiler>
