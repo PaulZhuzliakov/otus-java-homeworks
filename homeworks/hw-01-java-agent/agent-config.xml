@@ -2,4 +2,6 @@
     <duration>5</duration>
     <method>demo.App.fastMethod</method>
     <method>demo.App.slowMethod</method>
+    <method>demo.App.overloadedMethod(int)</method>
+    <method>demo.App.overloadedMethod(java.lang.String)</method>
 </profiler>
