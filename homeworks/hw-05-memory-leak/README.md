@@ -71,3 +71,13 @@ Heap dump file created [291805389 bytes in 0,553 secs]
 Утечка - RegistrationService, строки 12 и 21: безразмерный кэш `profileCache`,
 куда каждая регистрация навсегда кладёт `byte[512 * 1024]`. Около 240
 регистраций по 0,5 мб - вот и OOM.
+
+## Шаг 5 - фикс (отдельным коммитом)
+
+Убрал `profileCache`, register теперь:
+
+```java
+return users.save(new User(login, password)).getId();
+```
+
+Те же флаги, 4 минуты - 375 регистраций, не упало

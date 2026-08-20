@@ -1,15 +1,9 @@
 package hw05;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import org.springframework.stereotype.Service;
 
 @Service
 public class RegistrationService {
-
-    // кэш "профилей" пользователей: ключ - логин, значение - полмегабайта данных
-    private final Map<String, byte[]> profileCache = new ConcurrentHashMap<>();
 
     private final UserRepository users;
 
@@ -18,7 +12,7 @@ public class RegistrationService {
     }
 
     public long register(String login, String password) {
-        profileCache.put(login, new byte[512 * 1024]);
+        // кэш профилей убрал: данные и так в h2, в памяти они только копились
         return users.save(new User(login, password)).getId();
     }
 }
