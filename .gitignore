@@ -5,3 +5,12 @@ target/
 # hw-01-java-agent: результаты запуска и сборки агента
 profiler-result.txt
 dependency-reduced-pom.xml
+
+# hw-05-memory-leak: дампы хипа и индексы MAT
+*.hprof
+java_pid*.index
+java_pid*.threads
+
+# MAT: рабочая область eclipse и экспорт отчётов
+workspace/
+*_Leak_Suspects.zip
