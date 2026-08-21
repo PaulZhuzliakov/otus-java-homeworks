@@ -14,3 +14,7 @@ java_pid*.threads
 # MAT: рабочая область eclipse и экспорт отчётов
 workspace/
 *_Leak_Suspects.zip
+
+# gradle
+.gradle/
+build/
