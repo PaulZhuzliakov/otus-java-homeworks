@@ -27,6 +27,7 @@ public class Emulator {
             throw new IllegalArgumentException("не директория: " + path);
         }
         this.directory = dir;
+        cache.clear(); // в кэше могли остаться файлы из прежней директории
     }
 
     public void putFile(String fileName) throws IOException {
@@ -36,15 +37,7 @@ public class Emulator {
 
     public String getFile(String fileName) throws IOException {
         checkDirectory();
-        String content = cache.get(fileName);
-        if (content == null) {
-            System.out.println("(в кэше нет — читаю с диска и кладу в кэш)");
-            content = readFile(fileName);
-            cache.put(fileName, content);
-        } else {
-            System.out.println("(из кэша)");
-        }
-        return content;
+        return cache.getOrLoad(fileName, this::readFile);
     }
 
     private String readFile(String fileName) throws IOException {

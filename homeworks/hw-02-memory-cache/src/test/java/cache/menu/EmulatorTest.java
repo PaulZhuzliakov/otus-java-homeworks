@@ -43,4 +43,18 @@ class EmulatorTest {
 
         assertThrows(IllegalStateException.class, () -> emulator.getFile("Names.txt"));
     }
+
+    @Test
+    void getFileAfterDirectoryChangeNotFromOldCache() throws IOException {
+        Files.writeString(tempDir.resolve("Names.txt"), "Иван\nМария\n");
+        Emulator emulator = new Emulator();
+        emulator.setDirectory(tempDir.toString());
+        emulator.getFile("Names.txt");
+
+        Path otherDir = Files.createDirectory(tempDir.resolve("other"));
+        Files.writeString(otherDir.resolve("Names.txt"), "Пётр\n");
+        emulator.setDirectory(otherDir.toString());
+
+        assertEquals("Пётр\n", emulator.getFile("Names.txt"));
+    }
 }
