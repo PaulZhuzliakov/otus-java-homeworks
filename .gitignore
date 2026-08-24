@@ -14,6 +14,10 @@ java_pid*.threads
 # hw-07-java-modules: собранные jar для module-path
 mods/
 
+# hw-08-jdk-tools: собранная jlink'ом рантайм и скомпилированный класс
+custom-jre/
+*.class
+
 # MAT: рабочая область eclipse и экспорт отчётов
 workspace/
 *_Leak_Suspects.zip
