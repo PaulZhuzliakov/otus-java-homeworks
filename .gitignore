@@ -11,6 +11,9 @@ dependency-reduced-pom.xml
 java_pid*.index
 java_pid*.threads
 
+# hw-07-java-modules: собранные jar для module-path
+mods/
+
 # MAT: рабочая область eclipse и экспорт отчётов
 workspace/
 *_Leak_Suspects.zip
