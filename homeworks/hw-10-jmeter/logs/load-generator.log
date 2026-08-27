@@ -1,0 +1,6 @@
+WARNING: Runtime environment or build system does not support multi-release JARs. This will impact location-based features.
+нагрузка: 5 потоков, rps=10, 30 сек -> http://localhost:8080/api/clients
+summary +    227 in 00:00:23 =   10.1/s Avg:     2 Min:     1 Max:    36 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+summary +     77 in 00:00:08 =   10.3/s Avg:     2 Min:     1 Max:     3 Err:     0 (0.00%) Active: 0 Started: 5 Finished: 5
+summary =    304 in 00:00:30 =   10.1/s Avg:     2 Min:     1 Max:    36 Err:     0 (0.00%)
+готово, выборка в results.jtl
