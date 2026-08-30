@@ -1,7 +1,6 @@
 package org.example.memorydump.service;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.logging.log4j.util.Base64Util;
 import org.example.memorydump.cache.UserCache;
 import org.example.memorydump.entity.UserEntity;
 import org.example.memorydump.exception.UserExistException;
@@ -15,6 +14,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserCache userCache;
     private final UserRepository userRepository;
+    private final HashService hashService;
 
     public User getById(Long id) {
         var cachedUser = userCache.get(id);
@@ -26,19 +26,17 @@ public class UserService {
                 .orElseThrow(() -> new UserNotFoundException("Пользователь с id=" + id + " не найден"));
     }
 
-    public User save(String login, String password) {
+    public User save(String login, String password, String hashAlgorithm) {
         if (userRepository.findByLogin(login).isPresent()) {
             throw new UserExistException("Пользователь с именем []" + login + " уже существует");
         }
 
-        var userEntity = userRepository.save(new UserEntity(null, login, encodePassword(password)));
+        String hashPassword = hashService.hashPassword(password, hashAlgorithm);
+
+        var userEntity = userRepository.save(new UserEntity(null, login, hashPassword));
         var user = convert(userEntity);
         userCache.put(user);
         return user;
-    }
-
-    private String encodePassword(String password) {
-        return Base64Util.encode(password);
     }
 
     private User convert(UserEntity entity) {

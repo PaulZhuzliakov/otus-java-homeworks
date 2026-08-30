@@ -22,7 +22,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<UserResponse> create(@Valid @RequestBody UserCreateRequest request) {
-        var user = userService.save(request.login(), request.password());
+        var user = userService.save(request.login(), request.password(), request.algorithm());
         return ResponseEntity.ok(new UserResponse(user.id(), user.login()));
     }
 

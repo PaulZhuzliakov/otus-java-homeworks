@@ -8,6 +8,7 @@ public record UserCreateRequest(
         String login,
         @NotBlank
         @Size(min = 6)
-        String password
+        String password,
+        String algorithm
 ) {
 }
