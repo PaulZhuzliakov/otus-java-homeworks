@@ -14,6 +14,7 @@
         <module>profiling-agent</module>
         <module>serial-gc-profiling</module>
         <module>gc-and-zgc-discovery</module>
+        <module>web-service-with-login</module>
     </modules>
 
     <properties>
