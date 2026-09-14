@@ -9,7 +9,7 @@
 Из корня репозитория курса выполнить:
 
 ```bash
-mvn -f kislitsyn/serial-gc-profiling/pom.xml clean package
+mvn -f kislitsyn/pom.xml -pl serial-gc-profiling -am clean package
 ```
 
 ---
@@ -107,7 +107,7 @@ Survivor 1 ≈ 10,7 МБ
 ### Лог выполнения
 
 ```text
-boleque@Vlads-MacBook-Pro ~/src/GC-test % java -XX:+UseSerialGC -XX:NewRatio=1 -XX:SurvivorRatio=4 -Xms128m -Xmx128m '-Xlog:gc*::time' -cp kislitsyn/serial-gc-profiling/target/classes org.java.expert.Main 2>&1 | grep --line-buffered 'Pause Full'
+boleque@Vlads-MacBook-Pro ~/src/GC-test % java -XX:+UseSerialGC -XX:NewRatio=1 -XX:SurvivorRatio=4 -Xms128m -Xmx128m '-Xlog:gc*::time' -cp /tmp/gc-test-classes org.java.expert.Main 2>&1 | grep --line-buffered 'Pause Full'
 [2026-07-30T11:51:14.951+0300] GC(35) Pause Full (Allocation Failure)
 [2026-07-30T11:51:14.992+0300] GC(35) Pause Full (Allocation Failure) 110M->5M(117M) 41.651ms
 [2026-07-30T11:51:21.264+0300] GC(64) Pause Full (Allocation Failure)
@@ -142,7 +142,7 @@ java -XX:+UseSerialGC \
   -Xms128m \
   -Xmx128m \
   '-Xlog:gc*::time' \
-  -cp kislitsyn/serial-gc-profiling/target/classes \
+  -cp /tmp/gc-test-classes \
   org.java.expert.Main 2>&1 | grep --line-buffered 'Pause Full'
 ```
 
