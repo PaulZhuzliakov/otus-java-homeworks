@@ -13,6 +13,7 @@
         <module>cache</module>
         <module>profiling-agent</module>
         <module>serial-gc-profiling</module>
+        <module>gc-and-zgc-discovery</module>
     </modules>
 
     <properties>
