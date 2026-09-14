@@ -8,7 +8,6 @@
         <groupId>org.java.expert</groupId>
         <artifactId>java-expert</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>serial-gc-profiling</artifactId>
