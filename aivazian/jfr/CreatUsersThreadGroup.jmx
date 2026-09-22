@@ -25,7 +25,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="" elementType="HTTPArgument">
               <boolProp name="HTTPArgument.always_encode">false</boolProp>
-              <stringProp name="Argument.value">{&quot;login&quot;: &quot;user_1&quot;,&quot;password&quot;: &quot;123456789&quot;,&quot;algorithm&quot;: &quot;SHA-256&quot;}</stringProp>
+              <stringProp name="Argument.value">{&quot;login&quot;: &quot;user_${__counter(FALSE,)}&quot;,&quot;password&quot;: &quot;123456789&quot;,&quot;algorithm&quot;: &quot;SHA-256&quot;}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
