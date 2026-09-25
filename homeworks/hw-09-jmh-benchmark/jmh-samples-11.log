@@ -1,0 +1,247 @@
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureRight
+
+# Run progress: 0.00% complete, ETA 00:11:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.899 ns/op
+# Warmup Iteration   2: 0.895 ns/op
+# Warmup Iteration   3: 0.880 ns/op
+# Warmup Iteration   4: 0.861 ns/op
+# Warmup Iteration   5: 0.855 ns/op
+Iteration   1: 0.859 ns/op
+Iteration   2: 0.862 ns/op
+Iteration   3: 0.874 ns/op
+Iteration   4: 0.875 ns/op
+Iteration   5: 0.895 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureRight":
+  0.873 ±(99.9%) 0.054 ns/op [Average]
+  (min, avg, max) = (0.859, 0.873, 0.895), stdev = 0.014
+  CI (99.9%): [0.819, 0.927] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_1
+
+# Run progress: 14.29% complete, ETA 00:10:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.951 ns/op
+# Warmup Iteration   2: 0.934 ns/op
+# Warmup Iteration   3: 0.942 ns/op
+# Warmup Iteration   4: 0.943 ns/op
+# Warmup Iteration   5: 0.955 ns/op
+Iteration   1: 0.939 ns/op
+Iteration   2: 0.931 ns/op
+Iteration   3: 0.934 ns/op
+Iteration   4: 0.888 ns/op
+Iteration   5: 0.928 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_1":
+  0.924 ±(99.9%) 0.078 ns/op [Average]
+  (min, avg, max) = (0.888, 0.924, 0.939), stdev = 0.020
+  CI (99.9%): [0.846, 1.002] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_10
+
+# Run progress: 28.57% complete, ETA 00:08:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.108 ns/op
+# Warmup Iteration   2: 0.108 ns/op
+# Warmup Iteration   3: 0.109 ns/op
+# Warmup Iteration   4: 0.112 ns/op
+# Warmup Iteration   5: 0.111 ns/op
+Iteration   1: 0.113 ns/op
+Iteration   2: 0.111 ns/op
+Iteration   3: 0.111 ns/op
+Iteration   4: 0.111 ns/op
+Iteration   5: 0.110 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_10":
+  0.111 ±(99.9%) 0.003 ns/op [Average]
+  (min, avg, max) = (0.110, 0.111, 0.113), stdev = 0.001
+  CI (99.9%): [0.108, 0.114] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_100
+
+# Run progress: 42.86% complete, ETA 00:06:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.033 ns/op
+# Warmup Iteration   2: 0.033 ns/op
+# Warmup Iteration   3: 0.033 ns/op
+# Warmup Iteration   4: 0.034 ns/op
+# Warmup Iteration   5: 0.033 ns/op
+Iteration   1: 0.033 ns/op
+Iteration   2: 0.033 ns/op
+Iteration   3: 0.033 ns/op
+Iteration   4: 0.033 ns/op
+Iteration   5: 0.033 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_100":
+  0.033 ±(99.9%) 0.001 ns/op [Average]
+  (min, avg, max) = (0.033, 0.033, 0.033), stdev = 0.001
+  CI (99.9%): [0.033, 0.033] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_1000
+
+# Run progress: 57.14% complete, ETA 00:05:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.027 ns/op
+# Warmup Iteration   2: 0.026 ns/op
+# Warmup Iteration   3: 0.020 ns/op
+# Warmup Iteration   4: 0.020 ns/op
+# Warmup Iteration   5: 0.020 ns/op
+Iteration   1: 0.020 ns/op
+Iteration   2: 0.021 ns/op
+Iteration   3: 0.021 ns/op
+Iteration   4: 0.020 ns/op
+Iteration   5: 0.020 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_1000":
+  0.021 ±(99.9%) 0.001 ns/op [Average]
+  (min, avg, max) = (0.020, 0.021, 0.021), stdev = 0.001
+  CI (99.9%): [0.020, 0.021] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_10000
+
+# Run progress: 71.43% complete, ETA 00:03:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.016 ns/op
+# Warmup Iteration   2: 0.014 ns/op
+# Warmup Iteration   3: 0.014 ns/op
+# Warmup Iteration   4: 0.014 ns/op
+# Warmup Iteration   5: 0.014 ns/op
+Iteration   1: 0.014 ns/op
+Iteration   2: 0.014 ns/op
+Iteration   3: 0.014 ns/op
+Iteration   4: 0.014 ns/op
+Iteration   5: 0.014 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_10000":
+  0.014 ±(99.9%) 0.001 ns/op [Average]
+  (min, avg, max) = (0.014, 0.014, 0.014), stdev = 0.001
+  CI (99.9%): [0.013, 0.014] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_100000
+
+# Run progress: 85.71% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.012 ns/op
+# Warmup Iteration   2: 0.012 ns/op
+# Warmup Iteration   3: 0.012 ns/op
+# Warmup Iteration   4: 0.012 ns/op
+# Warmup Iteration   5: 0.012 ns/op
+Iteration   1: 0.012 ns/op
+Iteration   2: 0.012 ns/op
+Iteration   3: 0.012 ns/op
+Iteration   4: 0.012 ns/op
+Iteration   5: 0.012 ns/op
+
+
+Result "org.openjdk.jmh.samples.JMHSample_11_Loops.measureWrong_100000":
+  0.012 ±(99.9%) 0.001 ns/op [Average]
+  (min, avg, max) = (0.012, 0.012, 0.012), stdev = 0.001
+  CI (99.9%): [0.011, 0.013] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:11:42
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                               Mode  Cnt  Score    Error  Units
+JMHSample_11_Loops.measureRight         avgt    5  0.873 ±  0.054  ns/op
+JMHSample_11_Loops.measureWrong_1       avgt    5  0.924 ±  0.078  ns/op
+JMHSample_11_Loops.measureWrong_10      avgt    5  0.111 ±  0.003  ns/op
+JMHSample_11_Loops.measureWrong_100     avgt    5  0.033 ±  0.001  ns/op
+JMHSample_11_Loops.measureWrong_1000    avgt    5  0.021 ±  0.001  ns/op
+JMHSample_11_Loops.measureWrong_10000   avgt    5  0.014 ±  0.001  ns/op
+JMHSample_11_Loops.measureWrong_100000  avgt    5  0.012 ±  0.001  ns/op
+DONE exit=0
