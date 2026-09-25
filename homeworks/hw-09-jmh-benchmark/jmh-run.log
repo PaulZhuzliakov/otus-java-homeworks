@@ -1,0 +1,701 @@
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = MD5)
+
+# Run progress: 0.00% complete, ETA 00:02:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 5307.121 ops/s
+# Warmup Iteration   2: 6316.792 ops/s
+# Warmup Iteration   3: 6460.344 ops/s
+Iteration   1: 6419.158 ops/s
+Iteration   2: 6312.695 ops/s
+Iteration   3: 6302.782 ops/s
+Iteration   4: 6274.199 ops/s
+Iteration   5: 6135.334 ops/s
+
+
+Result "hw09.HashBenchmark.hash":
+  6288.834 ±(99.9%) 392.335 ops/s [Average]
+  (min, avg, max) = (6135.334, 6288.834, 6419.158), stdev = 101.888
+  CI (99.9%): [5896.499, 6681.169] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-256)
+
+# Run progress: 11.11% complete, ETA 00:02:11
+# Fork: 1 of 1
+# Warmup Iteration   1: 2833.689 ops/s
+# Warmup Iteration   2: 3098.353 ops/s
+# Warmup Iteration   3: 3310.418 ops/s
+Iteration   1: 3257.504 ops/s
+Iteration   2: 3324.282 ops/s
+Iteration   3: 3305.140 ops/s
+Iteration   4: 3219.558 ops/s
+Iteration   5: 3229.457 ops/s
+
+
+Result "hw09.HashBenchmark.hash":
+  3267.188 ±(99.9%) 177.361 ops/s [Average]
+  (min, avg, max) = (3219.558, 3267.188, 3324.282), stdev = 46.060
+  CI (99.9%): [3089.828, 3444.549] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-512)
+
+# Run progress: 22.22% complete, ETA 00:01:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 2199.897 ops/s
+# Warmup Iteration   2: 2504.336 ops/s
+# Warmup Iteration   3: 2516.183 ops/s
+Iteration   1: 2467.151 ops/s
+Iteration   2: 2599.706 ops/s
+Iteration   3: 2502.148 ops/s
+Iteration   4: 2511.347 ops/s
+Iteration   5: 2545.785 ops/s
+
+
+Result "hw09.HashBenchmark.hash":
+  2525.227 ±(99.9%) 193.185 ops/s [Average]
+  (min, avg, max) = (2467.151, 2525.227, 2599.706), stdev = 50.170
+  CI (99.9%): [2332.042, 2718.412] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = MD5)
+
+# Run progress: 33.33% complete, ETA 00:01:38
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁴ s/op
+# Warmup Iteration   2: ≈ 10⁻⁴ s/op
+# Warmup Iteration   3: ≈ 10⁻⁴ s/op
+Iteration   1: ≈ 10⁻⁴ s/op
+Iteration   2: ≈ 10⁻⁴ s/op
+Iteration   3: ≈ 10⁻⁴ s/op
+Iteration   4: ≈ 10⁻⁴ s/op
+Iteration   5: ≈ 10⁻⁴ s/op
+
+
+Result "hw09.HashBenchmark.hash":
+  ≈ 10⁻⁴ s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-256)
+
+# Run progress: 44.44% complete, ETA 00:01:21
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻³ s/op
+# Warmup Iteration   2: ≈ 10⁻⁴ s/op
+# Warmup Iteration   3: ≈ 10⁻⁴ s/op
+Iteration   1: ≈ 10⁻⁴ s/op
+Iteration   2: ≈ 10⁻⁴ s/op
+Iteration   3: ≈ 10⁻⁴ s/op
+Iteration   4: ≈ 10⁻⁴ s/op
+Iteration   5: ≈ 10⁻⁴ s/op
+
+
+Result "hw09.HashBenchmark.hash":
+  ≈ 10⁻⁴ s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-512)
+
+# Run progress: 55.55% complete, ETA 00:01:05
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻³ s/op
+# Warmup Iteration   2: ≈ 10⁻³ s/op
+# Warmup Iteration   3: ≈ 10⁻³ s/op
+Iteration   1: ≈ 10⁻³ s/op
+Iteration   2: ≈ 10⁻³ s/op
+Iteration   3: ≈ 10⁻³ s/op
+Iteration   4: ≈ 10⁻³ s/op
+Iteration   5: ≈ 10⁻³ s/op
+
+
+Result "hw09.HashBenchmark.hash":
+  ≈ 10⁻³ s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = MD5)
+
+# Run progress: 66.66% complete, ETA 00:00:49
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁴ s/op
+# Warmup Iteration   2: ≈ 10⁻⁴ s/op
+# Warmup Iteration   3: ≈ 10⁻⁴ s/op
+Iteration   1: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻⁴ s/op
+                 p0.95:   ≈ 10⁻⁴ s/op
+                 p0.99:   ≈ 10⁻⁴ s/op
+                 p0.999:  ≈ 10⁻⁴ s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.003 s/op
+
+Iteration   2: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻⁴ s/op
+                 p0.95:   ≈ 10⁻⁴ s/op
+                 p0.99:   ≈ 10⁻⁴ s/op
+                 p0.999:  ≈ 10⁻⁴ s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+Iteration   3: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻⁴ s/op
+                 p0.95:   ≈ 10⁻⁴ s/op
+                 p0.99:   ≈ 10⁻⁴ s/op
+                 p0.999:  ≈ 10⁻⁴ s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.002 s/op
+
+Iteration   4: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻⁴ s/op
+                 p0.95:   ≈ 10⁻⁴ s/op
+                 p0.99:   ≈ 10⁻⁴ s/op
+                 p0.999:  ≈ 10⁻⁴ s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.002 s/op
+
+Iteration   5: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻⁴ s/op
+                 p0.95:   ≈ 10⁻⁴ s/op
+                 p0.99:   ≈ 10⁻⁴ s/op
+                 p0.999:  ≈ 10⁻⁴ s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.003 s/op
+
+
+
+Result "hw09.HashBenchmark.hash":
+  N = 64383
+  mean =     ≈ 10⁻⁴ ±(99.9%) 0.001 s/op
+
+  Histogram, s/op:
+    [0.000, 0.000) = 64348 
+    [0.000, 0.001) = 28 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 0 
+    [0.001, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.003) = 4 
+    [0.003, 0.003) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     ≈ 10⁻⁴ s/op
+     p(50.0000) =     ≈ 10⁻⁴ s/op
+     p(90.0000) =     ≈ 10⁻⁴ s/op
+     p(95.0000) =     ≈ 10⁻⁴ s/op
+     p(99.0000) =     ≈ 10⁻⁴ s/op
+     p(99.9000) =     ≈ 10⁻⁴ s/op
+     p(99.9900) =      0.002 s/op
+     p(99.9990) =      0.003 s/op
+     p(99.9999) =      0.003 s/op
+    p(100.0000) =      0.003 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-256)
+
+# Run progress: 77.76% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻³ s/op
+# Warmup Iteration   2: ≈ 10⁻⁴ s/op
+# Warmup Iteration   3: ≈ 10⁻⁴ s/op
+Iteration   1: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  ≈ 10⁻³ s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.002 s/op
+
+Iteration   2: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+Iteration   3: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   0.001 s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.002 s/op
+
+Iteration   4: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.002 s/op
+
+Iteration   5: ≈ 10⁻⁴ s/op
+                 p0.00:   ≈ 10⁻⁴ s/op
+                 p0.50:   ≈ 10⁻⁴ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+
+
+Result "hw09.HashBenchmark.hash":
+  N = 33097
+  mean =     ≈ 10⁻⁴ ±(99.9%) 0.001 s/op
+
+  Histogram, s/op:
+    [0.000, 0.000) = 0 
+    [0.000, 0.001) = 32955 
+    [0.001, 0.001) = 137 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 0 
+    [0.001, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.003) = 3 
+    [0.003, 0.003) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     ≈ 10⁻⁴ s/op
+     p(50.0000) =     ≈ 10⁻⁴ s/op
+     p(90.0000) =     ≈ 10⁻³ s/op
+     p(95.0000) =     ≈ 10⁻³ s/op
+     p(99.0000) =     ≈ 10⁻³ s/op
+     p(99.9000) =      0.001 s/op
+     p(99.9900) =      0.002 s/op
+     p(99.9990) =      0.003 s/op
+     p(99.9999) =      0.003 s/op
+    p(100.0000) =      0.003 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-512)
+
+# Run progress: 88.87% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻³ s/op
+# Warmup Iteration   2: ≈ 10⁻³ s/op
+# Warmup Iteration   3: ≈ 10⁻³ s/op
+Iteration   1: ≈ 10⁻³ s/op
+                 p0.00:   ≈ 10⁻³ s/op
+                 p0.50:   ≈ 10⁻³ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+Iteration   2: ≈ 10⁻³ s/op
+                 p0.00:   ≈ 10⁻³ s/op
+                 p0.50:   ≈ 10⁻³ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  ≈ 10⁻³ s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+Iteration   3: ≈ 10⁻³ s/op
+                 p0.00:   ≈ 10⁻³ s/op
+                 p0.50:   ≈ 10⁻³ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   0.001 s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+Iteration   4: ≈ 10⁻³ s/op
+                 p0.00:   ≈ 10⁻³ s/op
+                 p0.50:   ≈ 10⁻³ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  0.001 s/op
+                 p0.9999: 0.002 s/op
+                 p1.00:   0.002 s/op
+
+Iteration   5: ≈ 10⁻³ s/op
+                 p0.00:   ≈ 10⁻³ s/op
+                 p0.50:   ≈ 10⁻³ s/op
+                 p0.90:   ≈ 10⁻³ s/op
+                 p0.95:   ≈ 10⁻³ s/op
+                 p0.99:   ≈ 10⁻³ s/op
+                 p0.999:  ≈ 10⁻³ s/op
+                 p0.9999: 0.003 s/op
+                 p1.00:   0.003 s/op
+
+
+
+Result "hw09.HashBenchmark.hash":
+  N = 25312
+  mean =     ≈ 10⁻³ ±(99.9%) 0.001 s/op
+
+  Histogram, s/op:
+    [0.000, 0.000) = 0 
+    [0.000, 0.001) = 25157 
+    [0.001, 0.001) = 143 
+    [0.001, 0.001) = 5 
+    [0.001, 0.001) = 0 
+    [0.001, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 1 
+    [0.002, 0.003) = 1 
+    [0.003, 0.003) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     ≈ 10⁻³ s/op
+     p(50.0000) =     ≈ 10⁻³ s/op
+     p(90.0000) =     ≈ 10⁻³ s/op
+     p(95.0000) =     ≈ 10⁻³ s/op
+     p(99.0000) =     ≈ 10⁻³ s/op
+     p(99.9000) =      0.001 s/op
+     p(99.9900) =      0.003 s/op
+     p(99.9990) =      0.003 s/op
+     p(99.9999) =      0.003 s/op
+    p(100.0000) =      0.003 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = MD5)
+
+# Run progress: 99.98% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.008 s/op
+# Warmup Iteration   2: 0.002 s/op
+# Warmup Iteration   3: 0.001 s/op
+Iteration   1: 0.001 s/op
+Iteration   2: 0.001 s/op
+Iteration   3: 0.001 s/op
+Iteration   4: 0.001 s/op
+Iteration   5: 0.001 s/op
+
+
+Result "hw09.HashBenchmark.hash":
+  N = 5
+  mean =      0.001 ±(99.9%) 0.001 s/op
+
+  Histogram, s/op:
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 1 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 1 
+    [0.001, 0.001) = 0 
+    [0.001, 0.001) = 1 
+    [0.001, 0.001) = 1 
+    [0.001, 0.001) = 1 
+    [0.001, 0.001) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      0.001 s/op
+     p(50.0000) =      0.001 s/op
+     p(90.0000) =      0.001 s/op
+     p(95.0000) =      0.001 s/op
+     p(99.0000) =      0.001 s/op
+     p(99.9000) =      0.001 s/op
+     p(99.9900) =      0.001 s/op
+     p(99.9990) =      0.001 s/op
+     p(99.9999) =      0.001 s/op
+    p(100.0000) =      0.001 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-256)
+
+# Run progress: 99.99% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.010 s/op
+# Warmup Iteration   2: 0.004 s/op
+# Warmup Iteration   3: 0.003 s/op
+Iteration   1: 0.003 s/op
+Iteration   2: 0.003 s/op
+Iteration   3: 0.003 s/op
+Iteration   4: 0.003 s/op
+Iteration   5: 0.003 s/op
+
+
+Result "hw09.HashBenchmark.hash":
+  N = 5
+  mean =      0.003 ±(99.9%) 0.001 s/op
+
+  Histogram, s/op:
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 1 
+    [0.003, 0.003) = 1 
+    [0.003, 0.003) = 1 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      0.003 s/op
+     p(50.0000) =      0.003 s/op
+     p(90.0000) =      0.003 s/op
+     p(95.0000) =      0.003 s/op
+     p(99.0000) =      0.003 s/op
+     p(99.9000) =      0.003 s/op
+     p(99.9900) =      0.003 s/op
+     p(99.9990) =      0.003 s/op
+     p(99.9999) =      0.003 s/op
+    p(100.0000) =      0.003 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.3, OpenJDK 64-Bit Server VM, 21.0.3+10-LTS
+# VM invoker: /home/paul/.sdkman/candidates/java/21.0.3-librca/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: hw09.HashBenchmark.hash
+# Parameters: (algorithm = SHA-512)
+
+# Run progress: 99.99% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.015 s/op
+# Warmup Iteration   2: 0.005 s/op
+# Warmup Iteration   3: 0.005 s/op
+Iteration   1: 0.004 s/op
+Iteration   2: 0.004 s/op
+Iteration   3: 0.004 s/op
+Iteration   4: 0.004 s/op
+Iteration   5: 0.001 s/op
+
+
+Result "hw09.HashBenchmark.hash":
+  N = 5
+  mean =      0.003 ±(99.9%) 0.005 s/op
+
+  Histogram, s/op:
+    [0.001, 0.001) = 0 
+    [0.001, 0.002) = 1 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.002) = 0 
+    [0.002, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.003) = 0 
+    [0.003, 0.004) = 0 
+    [0.004, 0.004) = 2 
+    [0.004, 0.004) = 1 
+    [0.004, 0.004) = 0 
+    [0.004, 0.005) = 1 
+    [0.005, 0.005) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      0.001 s/op
+     p(50.0000) =      0.004 s/op
+     p(90.0000) =      0.004 s/op
+     p(95.0000) =      0.004 s/op
+     p(99.0000) =      0.004 s/op
+     p(99.9000) =      0.004 s/op
+     p(99.9900) =      0.004 s/op
+     p(99.9990) =      0.004 s/op
+     p(99.9999) =      0.004 s/op
+    p(100.0000) =      0.004 s/op
+
+
+# Run complete. Total time: 00:02:28
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                   (algorithm)    Mode    Cnt     Score     Error  Units
+HashBenchmark.hash                  MD5   thrpt      5  6288.834 ± 392.335  ops/s
+HashBenchmark.hash              SHA-256   thrpt      5  3267.188 ± 177.361  ops/s
+HashBenchmark.hash              SHA-512   thrpt      5  2525.227 ± 193.185  ops/s
+HashBenchmark.hash                  MD5    avgt      5    ≈ 10⁻⁴             s/op
+HashBenchmark.hash              SHA-256    avgt      5    ≈ 10⁻⁴             s/op
+HashBenchmark.hash              SHA-512    avgt      5    ≈ 10⁻³             s/op
+HashBenchmark.hash                  MD5  sample  64383    ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.00            MD5  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.50            MD5  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.90            MD5  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.95            MD5  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.99            MD5  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.999           MD5  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.9999          MD5  sample            0.002             s/op
+HashBenchmark.hash:p1.00            MD5  sample            0.003             s/op
+HashBenchmark.hash              SHA-256  sample  33097    ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.00        SHA-256  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.50        SHA-256  sample           ≈ 10⁻⁴             s/op
+HashBenchmark.hash:p0.90        SHA-256  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.95        SHA-256  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.99        SHA-256  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.999       SHA-256  sample            0.001             s/op
+HashBenchmark.hash:p0.9999      SHA-256  sample            0.002             s/op
+HashBenchmark.hash:p1.00        SHA-256  sample            0.003             s/op
+HashBenchmark.hash              SHA-512  sample  25312    ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.00        SHA-512  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.50        SHA-512  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.90        SHA-512  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.95        SHA-512  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.99        SHA-512  sample           ≈ 10⁻³             s/op
+HashBenchmark.hash:p0.999       SHA-512  sample            0.001             s/op
+HashBenchmark.hash:p0.9999      SHA-512  sample            0.003             s/op
+HashBenchmark.hash:p1.00        SHA-512  sample            0.003             s/op
+HashBenchmark.hash                  MD5      ss      5     0.001 ±   0.001   s/op
+HashBenchmark.hash              SHA-256      ss      5     0.003 ±   0.001   s/op
+HashBenchmark.hash              SHA-512      ss      5     0.003 ±   0.005   s/op
+exit=0
