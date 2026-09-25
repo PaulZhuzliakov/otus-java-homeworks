@@ -14,11 +14,7 @@ public class MetricsService {
         this.meterRegistry = meterRegistry;
     }
 
-    public void countRegistrationAttempts(int count) {
-        for (int i = 0; i < count; i++) {
-            UUID traceToken = UUID.randomUUID();
-
-            meterRegistry.counter("demo.memory.leak", "reg.attempts.trace.id", traceToken.toString()).increment();
-        }
+    public void countRegistrationAttempts() {
+        meterRegistry.counter("demo.memory.leak", "operation", "registration").increment();
     }
 }

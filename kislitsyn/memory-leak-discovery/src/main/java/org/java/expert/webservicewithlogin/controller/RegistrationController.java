@@ -28,9 +28,9 @@ public class RegistrationController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public RegistrationResponse register(@Valid @RequestBody RegistrationRequest request) {
-        metricsService.countRegistrationAttempts(10);
+        metricsService.countRegistrationAttempts();
 
-        //var user = registrationService.register(request.login(), request.password());
+        var user = registrationService.register(request.login(), request.password());
 
         return new RegistrationResponse(1L, "alice");
     }
