@@ -1,10 +1,9 @@
 package org.example.memorydump.repository;
 
 import org.example.memorydump.entity.UserEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import reactor.core.publisher.Mono;
 
-import java.util.Optional;
-
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
-    Optional<UserEntity> findByLogin(String login);
+public interface UserRepository extends ReactiveCrudRepository<UserEntity, Long> {
+    Mono<UserEntity> findByLogin(String login);
 }
