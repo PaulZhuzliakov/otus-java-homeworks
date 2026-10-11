@@ -1,38 +1,51 @@
 # Java Platform Module System
 
-Заготовка Spring Boot-приложения для задания по Java Platform Module System. Исходный код скопирован из модуля `web-service-with-login`.
+Учебное приложение для знакомства с Java Platform Module System (JPMS).
+
+Проект создаётся поэтапно на основе приложения `web-service-with-login`.
+
+## Шаг 1. Каркас модулей
+
+`module-system` является Maven-агрегатором и содержит четыре дочерних модуля:
+
+```text
+module-system
+├── api
+├── service
+├── provider
+└── core
+```
+
+Каждый дочерний проект одновременно является:
+
+- Maven-модулем со своим `pom.xml`;
+- JPMS-модулем со своим `module-info.java`.
+
+Текущий граф зависимостей:
+
+```text
+api → service → provider
+              → core
+```
+
+Maven-зависимость предоставляет модулю необходимый JAR во время сборки. Директива `requires` в `module-info.java` разрешает читать соответствующий JPMS-модуль.
+
+Например, модуль `service` содержит Maven-зависимость на `core` и одновременно объявляет:
+
+```java
+requires org.java.expert.modulesystem.core;
+```
 
 ## Сборка
 
 Из корня репозитория:
 
 ```bash
-mvn -f kislitsyn/pom.xml \
-  -pl module-system \
-  clean package
+mvn -f kislitsyn/module-system/pom.xml clean verify
 ```
 
-## Запуск
+На первом шаге модули содержат только дескрипторы `module-info.java`. Исполняемое Spring Boot-приложение и бизнес-код будут добавлены на следующих шагах.
 
-```bash
-java -jar kislitsyn/module-system/target/module-system-1.0-SNAPSHOT.jar
-```
+## Следующий шаг
 
-## Регистрация пользователя
-
-```bash
-curl -i -X POST http://localhost:8080/api/users \
-  -H 'Content-Type: application/json' \
-  -d '{"login":"alice","password":"secret"}'
-```
-
-Успешный ответ имеет статус `201 Created`:
-
-```json
-{
-  "id": 1,
-  "login": "alice"
-}
-```
-
-Пустые значения возвращают `400 Bad Request`, повторная регистрация того же логина — `409 Conflict`.
+Реализовать модуль `core`: модель пользователя и in-memory-хранилище, которое присваивает идентификатор и сохраняет данные в коллекцию.
