@@ -36,6 +36,35 @@ Maven-зависимость предоставляет модулю необх�
 requires org.java.expert.modulesystem.core;
 ```
 
+## Шаг 2. Модуль `core`
+
+Модуль `core` содержит слой хранения из исходного приложения:
+
+- `User` — JPA-сущность;
+- `UserRepository` — Spring Data JPA-репозиторий;
+- H2 — базу данных, подключаемую во время выполнения.
+
+Как и в `web-service-with-login`, реализацию `UserRepository` во время запуска
+создаёт Spring Data, а идентификатор пользователя генерирует база данных.
+
+В `module-info.java` модуль объявляет используемые библиотеки и экспортирует
+пакеты, которые понадобятся сервисному модулю:
+
+```java
+module org.java.expert.modulesystem.core {
+    requires jakarta.persistence;
+    requires spring.data.jpa;
+    requires static lombok;
+
+    exports org.java.expert.modulesystem.core.model;
+    exports org.java.expert.modulesystem.core.repository;
+}
+```
+
+`exports` предоставляет обычный доступ к публичным типам во время компиляции и
+выполнения. Необходимость `opens` для доступа Hibernate через reflection
+проверим после сборки запускаемого модуля `api`.
+
 ## Сборка
 
 Из корня репозитория:
@@ -44,8 +73,6 @@ requires org.java.expert.modulesystem.core;
 mvn -f kislitsyn/module-system/pom.xml clean verify
 ```
 
-На первом шаге модули содержат только дескрипторы `module-info.java`. Исполняемое Spring Boot-приложение и бизнес-код будут добавлены на следующих шагах.
-
 ## Следующий шаг
 
-Реализовать модуль `core`: модель пользователя и in-memory-хранилище, которое присваивает идентификатор и сохраняет данные в коллекцию.
+Реализовать модуль `provider`, который будет предоставлять данные модулю `service`.
