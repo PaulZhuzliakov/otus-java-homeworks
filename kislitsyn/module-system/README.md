@@ -65,6 +65,37 @@ module org.java.expert.modulesystem.core {
 выполнения. Необходимость `opens` для доступа Hibernate через reflection
 проверим после сборки запускаемого модуля `api`.
 
+## Шаг 3. Модуль `provider`
+
+Модуль `provider` предоставляет сервисному слою хеш пароля. Он переносит
+зависимость от BCrypt из `service` за собственный публичный контракт:
+
+```java
+public interface PasswordHashProvider {
+    String hash(String password);
+}
+```
+
+`PasswordHashProviders.bcrypt()` создаёт реализацию на основе исходного
+`BCryptPasswordEncoder`. Пакет с реализацией не экспортируется, поэтому другие
+модули работают только с `PasswordHashProvider`.
+
+Дескриптор модуля содержит:
+
+```java
+module org.java.expert.modulesystem.provider {
+    requires org.apache.commons.logging;
+    requires spring.core;
+    requires spring.security.crypto;
+
+    exports org.java.expert.modulesystem.provider.password;
+}
+```
+
+`org.apache.commons.logging` и `spring.core` указаны явно, поскольку
+`BCryptPasswordEncoder` использует их во время выполнения, но
+`spring-security-crypto` не объявляет эти Maven-зависимости транзитивно.
+
 ## Сборка
 
 Из корня репозитория:
@@ -75,4 +106,4 @@ mvn -f kislitsyn/module-system/pom.xml clean verify
 
 ## Следующий шаг
 
-Реализовать модуль `provider`, который будет предоставлять данные модулю `service`.
+Перенести `RegistrationService` и `DuplicateLoginException` в модуль `service`.
