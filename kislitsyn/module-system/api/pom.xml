@@ -13,10 +13,6 @@
 
     <artifactId>module-system-api</artifactId>
 
-    <properties>
-        <spring-boot.version>4.1.0</spring-boot.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.java.expert</groupId>
@@ -27,12 +23,6 @@
         <dependency>
             <groupId>org.java.expert</groupId>
             <artifactId>module-system-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.java.expert</groupId>
-            <artifactId>module-system-provider</artifactId>
             <version>${project.version}</version>
         </dependency>
 
