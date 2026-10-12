@@ -96,6 +96,34 @@ module org.java.expert.modulesystem.provider {
 `BCryptPasswordEncoder` использует их во время выполнения, но
 `spring-security-crypto` не объявляет эти Maven-зависимости транзитивно.
 
+## Шаг 4. Модуль `service`
+
+Модуль `service` координирует регистрацию пользователя:
+
+1. получает хеш пароля у `PasswordHashProvider`;
+2. создаёт JPA-сущность `User`;
+3. сохраняет её через `UserRepository`;
+4. преобразует нарушение уникальности login в `DuplicateLoginException`.
+
+Таким образом, `service` зависит сразу от двух наших модулей:
+
+```java
+module org.java.expert.modulesystem.service {
+    requires org.java.expert.modulesystem.core;
+    requires org.java.expert.modulesystem.provider;
+    requires spring.context;
+    requires spring.tx;
+    requires spring.web;
+
+    exports org.java.expert.modulesystem.service;
+}
+```
+
+Unit-тест использует mock-реализации `PasswordHashProvider` и `UserRepository`,
+поэтому проверяет логику сервиса без запуска Spring и H2. Mockito подключается
+к тестовой JVM как Java agent: современные JDK больше не гарантируют возможность
+динамического self-attach во время уже запущенного теста.
+
 ## Сборка
 
 Из корня репозитория:
@@ -106,4 +134,5 @@ mvn -f kislitsyn/module-system/pom.xml clean verify
 
 ## Следующий шаг
 
-Перенести `RegistrationService` и `DuplicateLoginException` в модуль `service`.
+Собрать запускаемый Spring Boot-модуль `api`: перенести контроллер, DTO,
+конфигурацию и `application.properties`.
