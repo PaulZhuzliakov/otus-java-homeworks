@@ -16,6 +16,7 @@
         <module>gc-and-zgc-discovery</module>
         <module>web-service-with-login</module>
         <module>module-system</module>
+        <module>native-image</module>
     </modules>
 
     <properties>
