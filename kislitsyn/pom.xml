@@ -15,6 +15,7 @@
         <module>serial-gc-profiling</module>
         <module>gc-and-zgc-discovery</module>
         <module>web-service-with-login</module>
+        <module>native-image</module>
     </modules>
 
     <properties>
