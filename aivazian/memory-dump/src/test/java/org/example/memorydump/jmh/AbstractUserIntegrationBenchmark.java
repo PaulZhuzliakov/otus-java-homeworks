@@ -53,7 +53,7 @@ public abstract class AbstractUserIntegrationBenchmark {
     }
 
     private String createRequest(String algorithm) {
-        UserCreateRequest userCreateRequest = new UserCreateRequest("user-" + nextId(), "12345678", algorithm);
+        UserCreateRequest userCreateRequest = new UserCreateRequest("user-" + nextId(), "12345678", algorithm, "test", "test", "test@mail.ru");
         return objectMapper.writeValueAsString(userCreateRequest);
     }
 

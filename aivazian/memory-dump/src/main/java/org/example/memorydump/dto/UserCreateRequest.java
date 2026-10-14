@@ -9,6 +9,13 @@ public record UserCreateRequest(
         @NotBlank
         @Size(min = 6)
         String password,
-        String algorithm
+        @NotBlank
+        String algorithm,
+        @NotBlank
+        String firstName,
+        @NotBlank
+        String lastName,
+        @NotBlank
+        String email
 ) {
 }
