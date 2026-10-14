@@ -1,8 +1,9 @@
-# JDK Tools: keytool и jarsigner
+# JDK Tools: keytool, jarsigner и jlink
 
 ## Цель работы
 
-Выпустить самоподписанный сертификат, подписать им JAR-файл и проверить целостность подписи.
+Выпустить самоподписанный сертификат, подписать им JAR-файл, проверить целостность подписи.
+Cобрать облегчённый Java Runtime и запустить с его помощью приложение.
 
 ## Создание сертификата
 
@@ -31,7 +32,8 @@ keytool -list -v \
   -alias homework-signer
 ```
 
-Результат
+Результат:
+
 ```
 Alias name: homework-signer
 Creation date: 14 Oct 2026
@@ -85,7 +87,8 @@ jarsigner \
   homework-signer
 ```
 
-Результат 
+Результат:
+
 ```
 jar signed.
 
@@ -125,3 +128,69 @@ jarsigner -verify \
 jarsigner error: java.lang.SecurityException: SHA-256 digest error for BOOT-INF/classes/application.properties
 ```
 
+## Работа с jlink
+
+Для эксперимента было создано простое приложение с единственным классом `Main`: 
+
+```bash
+jar --list \
+  --file target/jdk-tools-1.0-SNAPSHOT.jar \
+  | grep '\.class$'
+```
+
+```text
+org/java/expert/jdktools/Main.class
+```
+
+### Сборка Java Runtime
+
+Для нашего простого приложения достаточно базового модуля `java.base`, кастомный runtime был собран следующей командой:
+
+```bash
+jlink \
+  --add-modules java.base \
+  --output target/custom-jre \
+  --strip-debug \
+  --no-header-files \
+  --no-man-pages \
+  --compress=zip-9
+```
+
+### Размер и состав Runtime
+
+Размер созданного Runtime был проверен:
+
+```bash
+du -sh target/custom-jre
+```
+
+```text
+68M    target/custom-jre
+```
+
+Список включённых модулей:
+
+```bash
+target/custom-jre/bin/java --list-modules
+```
+
+```text
+java.base@25.0.4.1.1
+jdk.internal.vm.ci@25.0.4.1.1
+```
+
+### Запуск программы
+
+```bash
+target/custom-jre/bin/java \
+  -jar target/jdk-tools-1.0-SNAPSHOT.jar
+```
+
+```text
+this is the main
+```
+
+## Вывод
+
+С помощью `keytool` и `jarsigner` были выполнены выпуск сертификата, подписание JAR и проверка его целостности. 
+С помощью `jlink` был создан специализированный Runtime размером 68 МБ, содержащий только необходимые модули. 
