@@ -1,0 +1,12 @@
+appname: registration
+replicas: 1
+
+image:
+  repository: hw-16-helm
+  tag: "1.0"
+  pullPolicy: IfNotPresent
+
+protocol: TCP
+port: 8080
+type: NodePort
+nodePort: 30001

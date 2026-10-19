@@ -1,0 +1,3 @@
+appname: registration-stage
+replicas: 1
+nodePort: 30003

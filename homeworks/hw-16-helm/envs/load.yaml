@@ -1,0 +1,3 @@
+appname: registration-load
+replicas: 3
+nodePort: 30004
