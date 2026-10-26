@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: arshgu/myapp
+  pullPolicy: IfNotPresent
+  tag: "v1"
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
