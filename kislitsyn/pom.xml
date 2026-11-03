@@ -17,7 +17,7 @@
         <module>web-service-with-login</module>
         <module>module-system</module>
         <module>native-image</module>
-        <module>jdk-tools</module>
+        <module>jmh</module>
     </modules>
 
     <properties>
