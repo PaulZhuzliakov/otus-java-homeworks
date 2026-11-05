@@ -14,7 +14,8 @@
         <module>profiling-agent</module>
         <module>serial-gc-profiling</module>
         <module>gc-and-zgc-discovery</module>
-        <module>web-service-with-login</module>
+        <module>jmeter</module>
+        <module>jmeter/web-service-with-login</module>
         <module>module-system</module>
         <module>native-image</module>
         <module>jmh</module>

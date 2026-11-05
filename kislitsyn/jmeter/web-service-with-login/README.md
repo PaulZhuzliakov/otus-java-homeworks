@@ -8,13 +8,13 @@ Spring Boot-приложение с простым REST-сервисом рег�
 Из корня репозитория:
 
 ```bash
-mvn -f kislitsyn/web-service-with-login/pom.xml clean package
+mvn -pl jmeter/web-service-with-login -am clean package
 ```
 
 ## Запуск
 
 ```bash
-java -jar kislitsyn/web-service-with-login/target/web-service-with-login-1.0-SNAPSHOT.jar
+java -jar jmeter/web-service-with-login/target/web-service-with-login-1.0-SNAPSHOT.jar
 ```
 
 ## Регистрация пользователя
