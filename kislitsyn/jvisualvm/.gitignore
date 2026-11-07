@@ -1,0 +1,7 @@
+/target/
+/results/*
+!/results/.gitkeep
+/profiling/*
+!/profiling/.gitkeep
+!/profiling/flamegraph.html
+!/profiling/visualvm-jdbc.png
