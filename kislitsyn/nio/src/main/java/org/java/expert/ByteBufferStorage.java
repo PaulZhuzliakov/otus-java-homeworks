@@ -22,8 +22,8 @@ public class ByteBufferStorage implements OffHeapStorage {
     }
 
     @Override
-    public Buffer load(String path) throws NoSuchFileException {
-        try (FileChannel channel = FileChannel.open(Paths.get(path), StandardOpenOption.READ);) {
+    public ByteBuffer load(String path) throws NoSuchFileException {
+        try (FileChannel channel = FileChannel.open(Paths.get(path), StandardOpenOption.READ)) {
             long fileSize = channel.size();
 
             if (fileSize > bufferSize) throw new IllegalArgumentException("File size is more than buffer size");
