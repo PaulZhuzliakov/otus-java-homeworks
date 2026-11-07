@@ -11,7 +11,9 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ByteBufferStorageTest {
 
@@ -27,6 +29,8 @@ class ByteBufferStorageTest {
         Files.write(file, expected);
 
         ByteBuffer buffer = storage.load(file.toString());
+        assertTrue(buffer.isDirect());
+
         byte[] actual = new byte[buffer.remaining()];
         buffer.get(actual);
 
@@ -56,6 +60,25 @@ class ByteBufferStorageTest {
         assertThrows(
                 IllegalArgumentException.class,
                 () -> storage.load(file.toString())
+        );
+    }
+
+    @Test
+    void shouldLoadEmptyFile() throws IOException {
+        ByteBufferStorage storage = new ByteBufferStorage(0);
+        Path file = Files.createFile(tempDir.resolve("empty.txt"));
+
+        ByteBuffer buffer = storage.load(file.toString());
+
+        assertTrue(buffer.isDirect());
+        assertEquals(0, buffer.remaining());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenBufferSizeIsNegative() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new ByteBufferStorage(-1)
         );
     }
 }

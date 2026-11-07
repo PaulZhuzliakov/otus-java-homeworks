@@ -1,24 +1,25 @@
 package org.java.expert;
 
 import java.io.IOException;
-import java.nio.Buffer;
+import java.io.UncheckedIOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-
 public class ByteBufferStorage implements OffHeapStorage {
     private static final int CHUNKING_THRESHOLD = 50 * 1024 * 1024;
     private static final int CHUNK_SIZE = 5 * 1024 * 1024;
 
-    private final int bufferSize;
+    private final int maxBufferSize;
 
-    public ByteBufferStorage(int bufferSize) {
-        if (bufferSize < 0) throw new IllegalArgumentException("Buffer size can't be less than 0");
+    public ByteBufferStorage(int maxBufferSize) {
+        if (maxBufferSize < 0) {
+            throw new IllegalArgumentException("Buffer size can't be less than 0");
+        }
 
-        this.bufferSize = bufferSize;
+        this.maxBufferSize = maxBufferSize;
     }
 
     @Override
@@ -26,7 +27,9 @@ public class ByteBufferStorage implements OffHeapStorage {
         try (FileChannel channel = FileChannel.open(Paths.get(path), StandardOpenOption.READ)) {
             long fileSize = channel.size();
 
-            if (fileSize > bufferSize) throw new IllegalArgumentException("File size is more than buffer size");
+            if (fileSize > maxBufferSize) {
+                throw new IllegalArgumentException("File size is more than buffer size");
+            }
 
             ByteBuffer buffer = ByteBuffer.allocateDirect((int) fileSize);
 
@@ -40,7 +43,7 @@ public class ByteBufferStorage implements OffHeapStorage {
         } catch (NoSuchFileException e) {
             throw e;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new UncheckedIOException(e);
         }
     }
 
