@@ -10,12 +10,14 @@ import java.nio.file.StandardOpenOption;
 
 
 public class ByteBufferStorage implements OffHeapStorage {
-    private final int CHUNKING_THRESHOLD = 50 * 1024 * 1024; // 100Mb
-    private final int CHUCK_SIZE = 5 * 1024 * 1024; // 5Mb
+    private static final int CHUNKING_THRESHOLD = 50 * 1024 * 1024;
+    private static final int CHUNK_SIZE = 5 * 1024 * 1024;
 
-    private int bufferSize = 50 * 1024 * 1024; // 100Mb
+    private final int bufferSize;
 
     public ByteBufferStorage(int bufferSize) {
+        if (bufferSize < 0) throw new IllegalArgumentException("Buffer size can't be less than 0");
+
         this.bufferSize = bufferSize;
     }
 
@@ -23,14 +25,12 @@ public class ByteBufferStorage implements OffHeapStorage {
     public Buffer load(String path) throws NoSuchFileException {
         try (FileChannel channel = FileChannel.open(Paths.get(path), StandardOpenOption.READ);) {
             long fileSize = channel.size();
+
             if (fileSize > bufferSize) throw new IllegalArgumentException("File size is more than buffer size");
 
-            int actualNeededBufferSize = Math.toIntExact(Math.min(bufferSize, fileSize));
-            ByteBuffer buffer = ByteBuffer.allocateDirect(actualNeededBufferSize);
+            ByteBuffer buffer = ByteBuffer.allocateDirect((int) fileSize);
 
-            boolean isChunkedRead = fileSize > actualNeededBufferSize;
-
-            if (isChunkedRead) {
+            if (fileSize > CHUNKING_THRESHOLD) {
                 chunkedRead(channel, buffer);
             } else {
                 fullRead(channel, buffer);
@@ -48,12 +48,12 @@ public class ByteBufferStorage implements OffHeapStorage {
         assert buffer.limit() == buffer.capacity();
 
         while (buffer.position() < buffer.capacity()) {
-            int bytesRead = Math.min(
-                    CHUCK_SIZE,
+            int bytesToRead = Math.min(
+                    CHUNK_SIZE,
                     buffer.capacity() - buffer.position()
             );
 
-            buffer.limit(buffer.position() + bytesRead);
+            buffer.limit(buffer.position() + bytesToRead);
             channel.read(buffer);
         }
     }
