@@ -1,6 +1,5 @@
 package org.java.expert;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
@@ -19,20 +18,15 @@ class ByteBufferStorageTest {
     @TempDir
     Path tempDir;
 
-    private ByteBufferStorage storage;
-
-    @BeforeEach
-    void setUp() {
-        storage = new ByteBufferStorage(1024);
-    }
-
     @Test
     void shouldLoadFile() throws IOException {
+        ByteBufferStorage storage = new ByteBufferStorage(1024);
+
         byte[] expected = "test data".getBytes(StandardCharsets.UTF_8);
         Path file = tempDir.resolve("test.txt");
         Files.write(file, expected);
 
-        ByteBuffer buffer = (ByteBuffer) storage.load(file.toString());
+        ByteBuffer buffer = storage.load(file.toString());
         byte[] actual = new byte[buffer.remaining()];
         buffer.get(actual);
 
@@ -41,11 +35,27 @@ class ByteBufferStorageTest {
 
     @Test
     void shouldThrowExceptionWhenFileDoesNotExist() {
+        ByteBufferStorage storage = new ByteBufferStorage(1024);
+
         Path missingFile = tempDir.resolve("missing.txt");
 
         assertThrows(
                 NoSuchFileException.class,
                 () -> storage.load(missingFile.toString())
+        );
+    }
+
+    @Test
+    void shouldThrowExceptionWhenFileSizeGreaterThanBufferSize() throws IOException {
+        ByteBufferStorage storage = new ByteBufferStorage(1);
+
+        byte[] content = "test data".getBytes(StandardCharsets.UTF_8);
+        Path file = tempDir.resolve("test.txt");
+        Files.write(file, content);
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> storage.load(file.toString())
         );
     }
 }
