@@ -20,6 +20,7 @@
         <module>native-image</module>
         <module>jmh</module>
         <module>jvisualvm</module>
+        <module>nio</module>
     </modules>
 
     <properties>
