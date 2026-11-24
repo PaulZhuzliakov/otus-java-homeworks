@@ -1,0 +1,4 @@
+summary = 9033 in 00:03:02 = 49.6/s Avg: 395 Min: 0 Max: 3790 Err: 1791 (19.83%)
+
+план: 20 потоков, ramp-up 5с, длительность 180с;
+сэмплеры: /register, /register/db, /register/exception, /register/lock, /register (age=abc)
