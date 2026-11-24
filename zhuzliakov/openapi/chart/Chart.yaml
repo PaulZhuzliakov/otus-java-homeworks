@@ -1,0 +1,6 @@
+apiVersion: v2
+name: registration
+description: helm chart для сервиса регистрации
+type: application
+version: 0.1.0
+appVersion: "1.0"
