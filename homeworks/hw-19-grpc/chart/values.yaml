@@ -1,0 +1,12 @@
+appname: shop
+replicas: 1
+
+image:
+  repository: hw-19-grpc
+  tag: "1.0"
+  pullPolicy: IfNotPresent
+
+protocol: TCP
+port: 50051
+type: NodePort
+nodePort: 30002
